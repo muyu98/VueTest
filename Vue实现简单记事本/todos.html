@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/todos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- 标题 -->
+        <div class="header">
+            简单记事本
+        </div>
+        <!-- 内容部分 -->
+        <div class="body">
+            <!-- 输入框 -->
+            <input type="text" placeholder="请输入内容" autofocus="autofocus" v-model="msg" @keyup.enter="add">
+            <ul>
+                <!-- 每一条信息 -->
+                <li v-for="(item,index) in msgList">
+                    <span>{{ index+1 }}.</span>
+                    {{item}}
+                    <button @click="remove(index)">X</button>
+                </li>
+                <!-- 信息总量与清空 -->
+                <div class="footer">
+                    <div class="count" v-show="msgList.length!=0">{{msgList.length}} items left</div>
+                    <button v-show="msgList.length!=0" @click="clear">clear</button>
+                </div>
+            </ul>            
+        </div>
+        
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/todos.js"></script>
+</html>

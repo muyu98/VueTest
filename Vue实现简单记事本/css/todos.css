@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f2f2f2;
+}
+/* 输入框预显示文字样式 */
+input::-webkit-input-placeholder {
+  color: #efedef;
+  font-style: italic;
+}
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+  color: #efedef;
+  font-style: italic;
+}
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+  color: #efedef;
+  font-style: italic;
+}
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  color: #efedef;
+  font-style: italic;
+}
+button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.container {
+  margin: 0 auto;
+  width: 400px;
+}
+.container .header {
+  padding: 25px 100px;
+  font: lighter 30px 微软黑体;
+  color: #c94f4f;
+  text-align: center;
+}
+.container .body {
+  margin: 0 auto;
+  width: 350px;
+  box-shadow: 0 0 10px 3px #dddcdc;
+}
+.container .body input {
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  line-height: 40px;
+  text-indent: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f2f0f2;
+}
+.container .body ul {
+  width: 350px;
+  color: #5f5d5d;
+  background: #ffffff;
+}
+.container .body ul li {
+  width: 100%;
+  height: 34px;
+  background: #ffffff;
+  line-height: 34px;
+  list-style: none;
+  position: relative;
+  border-bottom: 1px solid #f2f0f2;
+}
+.container .body ul li span {
+  font-size: 14px;
+  margin: 0 15px 0 10px;
+}
+.container .body ul li button {
+  display: none;
+  font-size: 14px;
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  float: right;
+  color: #dab5b5;
+}
+.container .body ul li:hover button {
+  display: block;
+}
+.container .body ul .footer {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  font-size: 12px;
+  line-height: 34px;
+  position: relative;
+}
+.container .body ul .footer .count {
+  margin-left: 15px;
+  color: #ccc8c8;
+}
+.container .body ul .footer button {
+  color: #ccc8c8;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
