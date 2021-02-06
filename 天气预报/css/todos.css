@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f2f2f2;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+.container .header {
+  text-align: center;
+  padding: 30px 0;
+  letter-spacing: 7px;
+  font-size: 30px;
+  color: #5191bb;
+}
+.container .search {
+  margin: 0 auto;
+  width: 600px;
+}
+.container .search input {
+  width: 500px;
+  height: 35px;
+  line-height: 35px;
+  text-indent: 5px;
+  border: 1px solid #8dafe8;
+  margin-right: -5px;
+}
+.container .search button {
+  width: 80px;
+  height: 38px;
+  line-height: 38px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: #3b99d0;
+  margin-top: 4px;
+}
+.container .search ul {
+  display: flex;
+  text-indent: 2px;
+  margin-top: 5px;
+}
+.container .search ul li {
+  list-style: none;
+  margin-right: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #b4adad;
+}
+.container .detail ul {
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.container .detail ul li {
+  list-style: none;
+  position: relative;
+  width: 154px;
+  height: 100px;
+  text-align: center;
+  margin-right: 2px;
+}
+.container .detail ul li:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  top: 20%;
+  background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 10%, #6b6b6b 30%, #6b6b6b 70%, #eeeeee 90%, #ffffff 100%);
+}
+.container .detail ul li p:nth-child(1) {
+  height: 42px;
+  line-height: 46px;
+  color: #fcbb8a;
+  font-size: 20px;
+}
+.container .detail ul li p:nth-child(2) {
+  height: 30px;
+  line-height: 30px;
+  color: #fcbb8a;
+  font-size: 12px;
+}
+.container .detail ul li:last-child:before {
+  display: none;
+}

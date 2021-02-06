@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/todos.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<body>
+    <div class="container" id="app">
+        <!-- 标题 -->
+        <div class="header">天气预报</div>
+        <!-- 搜索框 -->
+        <div class="search">
+            <input type="text" placeholder="请输入需要查询的城市" autofocus="autofocus" v-model="city" @keyup.enter="search">
+            <button @click="search">搜索</button>
+            <ul>
+                <li @click="select('北京市')">北京市</li>
+                <li @click="select('深圳市')">深圳市</li>
+            </ul>
+        </div>
+        <!-- 天气信息 -->
+        <div class="detail">
+            <ul>
+                <li v-for="item in weather">
+                    <p>{{item.weather}}</p>
+                    <p>低温{{item.lowest}} ~ 高温{{item.highest}}</p>
+                    <p>{{item.date}}</p>
+                    <p>{{item.week}}</p>
+                </li>               
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script src="js/todos.js"></script>
+</html>
